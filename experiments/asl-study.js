@@ -364,14 +364,11 @@ export default {
         </table>
         <p class="subtle">Grading is approximate and based on public data — where you signed a letter correctly and it says otherwise, the model is wrong.</p>`;
     }
-    return `<p>Your letters before and after the learning part (the model's
-        verdict, never shown during the checks; a letter made with the other
-        hand counts as not right):</p>
+    return `<p>Your letters before and after the learning part:</p>
       <p><strong>Before: ${all("pre")} &nbsp; After: ${all("post")}</strong></p>
       <table class="results"><tr><th>letter</th><th>before</th><th>after</th></tr>
       ${letters.map((l) => `<tr><th>${l}</th><td>${pct(by[l].pre)}</td><td>${pct(by[l].post)}</td></tr>`).join("")}
-      </table>
-      <p class="subtle">Grading is approximate and based on public data — it can be wrong.</p>`;
+      </table>`;
   },
 };
 
